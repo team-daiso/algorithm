@@ -10,7 +10,7 @@ function solution(s) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] === '(') {
       openBracket.push('open');
-    } else if (s[i] === ')') {
+    } else {
       if (!openBracket.length) {
         return false;
       }
@@ -33,7 +33,7 @@ function solution(s) {
   s.split('').map((bracket) => {
     if (bracket === '(') {
       openBrackets++;
-    } else if (bracket === ')') {
+    } else {
       if (!openBrackets) {
         return false;
       }
