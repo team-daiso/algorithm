@@ -1,7 +1,9 @@
 function solution(n) {
   let sum = 0;
   let count = 0;
-  let firstIdx = 1;
+  let startNum = 1;
+
+  if (n === 1) return 1;
 
   for (let i = 1; i <= Math.ceil(n / 2); i++) {
     sum += i;
@@ -9,9 +11,9 @@ function solution(n) {
     if (sum >= n) {
       if (sum === n) count++;
       sum = 0;
-      i = firstIdx++;
+      i = startNum++;
     }
   }
 
-  return n === 1 ? 1 : count + 1;
+  return count + 1;
 }
