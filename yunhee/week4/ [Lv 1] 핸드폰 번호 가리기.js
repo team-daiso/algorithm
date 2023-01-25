@@ -1,5 +1,5 @@
 function solution(num) {
-    const leng = num.length;
+    const leng = num.length - 4;
     
-    return `${"*".repeat(leng - 4)}${num.substr(leng - 4)}`
+    return `${"*".repeat(leng)}${num.substr(leng)}`
 }
