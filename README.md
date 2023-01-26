@@ -1,5 +1,9 @@
+<br/>
+<br/>
+
 # 🏠 Daiso algorithm
 다이소 스터디 알고리즘 풀이 저장소입니다.
+<br/>
 <br/>
 <br/>
 <br/>
@@ -8,7 +12,7 @@
 ## 💁 함께 하는 사람들
 |김서연|김세연|김윤희|노경민|도현수|방기현|
 |:--:|:--:|:--:|:--:|:--:|:--:|
-|<img src="https://avatars.githubusercontent.com/u/97490053?v=4" width=120>|<img src="https://avatars.githubusercontent.com/u/107875909?v=4" width=120>|<img src="https://avatars.githubusercontent.com/u/62630941?v=4" width=120>|<img src="https://avatars.githubusercontent.com/u/93895421?v=4" width=120>|<img src="https://avatars.githubusercontent.com/u/105625895?v=4" width=120>|<img src="https://avatars.githubusercontent.com/u/102677317?s=400&u=d1fc15bf19c4d0fb775e7b0f58ce83bd91fbe72c&v=4" width=120>|
+|<img src="https://avatars.githubusercontent.com/u/97490053?v=4" width=110>|<img src="https://avatars.githubusercontent.com/u/107875909?v=4" width=110>|<img src="https://avatars.githubusercontent.com/u/62630941?v=4" width=110>|<img src="https://avatars.githubusercontent.com/u/93895421?v=4" width=110>|<img src="https://avatars.githubusercontent.com/u/105625895?v=4" width=110>|<img src="https://avatars.githubusercontent.com/u/102677317?s=400&u=d1fc15bf19c4d0fb775e7b0f58ce83bd91fbe72c&v=4" width=110>|
 |[@seoyeon0108](https://github.com/seoyeon0108)|[@uxolrv](https://github.com/uxolrv)|[@kyh1685](https://github.com/kyh1685)|[@devminoh](https://github.com/devminoh)|[@dohyeons](https://github.com/dohyeons)|[@kihyeoon](https://github.com/kihyeoon)|
 
 <br/>
