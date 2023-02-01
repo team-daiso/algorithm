@@ -6,8 +6,7 @@ function solution(s) {
   // 다르면 push해줌 i번째 극자를
   // 만약 배열이 비어있으면 다 제거가 가능하다는 말임
   let arr = [];
-  let len = s.length;
-  for (let i = 0; i < len; i++) {
+  for (let i = 0; i < s.length; i++) {
     if (arr[arr.length - 1] !== s[i]) {
       arr.push(s[i]);
     } else {
