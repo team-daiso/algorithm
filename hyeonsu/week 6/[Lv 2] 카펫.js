@@ -1,5 +1,5 @@
 function solution(brown, yellow) {
-  // brown + yellow의 약수중 약수가 짝수면 5,6번째, 홀수면 중간의 제곱
+  // brown + yellow의 약수중 약수가 짝수면 중간 두개, 홀수면 중간의 제곱
   // 약수는 본인을 제외하고, n/2 보다 클 수 없다. 
   const sum = brown + yellow;
   const divisors = [];
