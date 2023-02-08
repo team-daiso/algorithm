@@ -10,7 +10,7 @@ function solution(left, right) {
         for(let j = 2; j <= i; j++) if(i % j === 0) count++;
         
         // 약수의 개수가 짝수라면 더해주고 홀수라면 빼주기
-        result = count % 2 === 0 ? result + i : result - i
+        result += count % 2 === 0 ? i : -i
     }
     
     return result;
