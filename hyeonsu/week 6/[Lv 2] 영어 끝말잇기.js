@@ -19,27 +19,25 @@ function solution(n, words) {
   // 전 단어의 마지막 char와 다음 단어의 첫 char가 다를 때
   //
   //
-  let stack = [];
-  let order = 0; // 몇번째 사람인지
+  let stack = [words[0]];
+  let order = 1; // 몇번째 사람인지
   let turn = 0; // 몇번쨰 턴인지
-  let idx = 0;
+  let idx = 1;
+
   while (stack.length !== words.length) {
     let word = words[idx];
     order < n ? order++ : (order = 1);
     turn = Math.ceil((idx + 1) / n);
-    if (idx === 0) {
-      stack.push(word);
+    if (
+      stack.includes(word) ||
+      word[0] !== stack[stack.length - 1][stack[stack.length - 1].length - 1]
+    ) {
+      return [order, turn];
     } else {
-      if (
-        stack.includes(word) ||
-        word[0] !== stack[stack.length - 1][stack[stack.length - 1].length - 1]
-      ) {
-        return [order, turn];
-      } else {
-        stack.push(word);
-      }
+      stack.push(word);
     }
     idx++;
   }
+
   return [0, 0];
 }
