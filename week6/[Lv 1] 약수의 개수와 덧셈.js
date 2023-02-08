@@ -19,11 +19,12 @@ function solution(left, right) {
   return sum;
 }
 
-/*
-  예시: 16의 약수는?
-  16의 제곱근 = 4
-  4까지의 약수는 1, 2, 4
-  16 / 1 = 16  ===> 16도 약수!
-  16 / 2 = 8   ===> 8도 약수!
-  16 / 4 = 4   ===> 4도 약수! but, 4는 이미 구해진 약수 => 코드 상에서 예외처리 필요
-*/
+// 수학 천재 경민님 풀이 참고!!
+function solution(left, right) {
+  let sum = 0;
+  // 제곱근이 정수면 약수의 개수가 홀수가 됨
+  for (let i = left; i <= right; i++) {
+    sum += Number.isInteger(Math.sqrt(i)) ? -i : i;
+  }
+  return sum;
+}
