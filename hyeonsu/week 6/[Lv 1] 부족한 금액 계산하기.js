@@ -7,6 +7,6 @@ function solution(price, money, count) {
   for (let i = 2; i <= count; i++) {
     price += firstPrice * i;
   }
-  price < money ? (answer += 1) : (answer += price - money + 1);
+  answer += price < money ? 1 : price - money + 1
   return answer;
 }

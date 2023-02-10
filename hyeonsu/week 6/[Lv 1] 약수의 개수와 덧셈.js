@@ -14,11 +14,7 @@ function solution(left, right) {
 	}
 	
 	for(let j = left ; j <= right ; j++) {
-			if(divisorCounter(j) %2 ===0) {
-					answer += j
-			} else {
-					answer -= j
-			}
+		answer += divisorCounter(j) % 2 === 0 ? j : -j
 	}
 	return answer;
 }
