@@ -8,5 +8,6 @@ function solution(brown, yellow) {
       if(sum%i === 0) divisors.push(i);
   }
   divisors.push(sum);
-  return divisors.length % 2 === 0 ? [divisors[(divisors.length/2)], divisors[(divisors.length/2)-1]] : [divisors[Math.floor(divisors.length/2)], divisors[Math.floor(divisors.length/2)]]
+  let len = divisors.length;
+  return len % 2 === 0 ? [divisors[(len/2)], divisors[(len/2)-1]] : [divisors[Math.floor(len/2)], divisors[Math.floor(len/2)]]
 }
