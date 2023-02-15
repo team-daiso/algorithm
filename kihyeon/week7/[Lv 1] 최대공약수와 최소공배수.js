@@ -4,8 +4,7 @@ function solution(n, m) {
 }
 
 const greatestCommonDivisor = (a, b) => {
-  if (b === 0) return a;
-  else return greatestCommonDivisor(b, a % b);
+  return b === 0 ? a : greatestCommonDivisor(b, a % b);
 };
 
 /// 2번 풀이
