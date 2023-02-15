@@ -5,10 +5,8 @@ function solution(people, limit) {
   for (let weight of people) {
     if (weight + people[people.length - 1] <= limit) {
       people.pop();
-      count++;
-    } else {
-      count++;
     }
+    count++;
   }
 
   return count;
