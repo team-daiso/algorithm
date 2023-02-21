@@ -20,9 +20,7 @@ function solution(arr) {
 }
 //  첫번쨰의 리팩터링
 function solution(arr) {
-  let numbers = arr.filter((num, idx) => arr[idx - 1] !== num);
-  answer = numbers;
-  return answer;
+  return arr.filter((num, idx) => arr[idx - 1] !== num);
 }
 
 // 큐 방법으로 풀 경우.... answer에 같은 요소가 있어도 넣는 방법을 해결해야 함
