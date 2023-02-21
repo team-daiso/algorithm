@@ -4,7 +4,8 @@ function solution(n, m) {
   const gcd = (n, m) => {
     return m % n === 0 ? n : gcd(m % n, n) // 최대공약수
   };
-  const lcd = (n * m) / gcd(n, m);
-  const answer = [gcd(n, m), lcd];
+  let gcdResult = gcd(n, m)
+  const lcd = (n * m) / gcdResult;
+  const answer = [gcdResult, lcd];
   return answer;
 }
