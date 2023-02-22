@@ -3,13 +3,15 @@ function solution(sizes) {
   // 변수 max 와 min을 선언하고 0 할당
   // sizes의 모든 요소를 돌면서
   let max = 0;
-  let min = Math.min(...sizes[0]);
+  let min = 0;
   for (let el of sizes) {
-    if (Math.max(...el) > max) {
-      max = Math.max(...el);
+    const tMax = Math.max(...el);
+    const tMin = Math.min(...el);
+    if (tMax > max) {
+      max = tMax;
     }
-    if (Math.min(...el) > min) {
-      min = Math.min(...el);
+    if (tMin > min) {
+      min = tMin;
     }
   }
   return max * min;
