@@ -13,9 +13,7 @@ function solution(s) {
   ];
 
   numbers.forEach((number, idx) => {
-    if (s.includes(number)) {
       s = s.replaceAll(number, idx);
-    }
   });
   return +s;
 }
