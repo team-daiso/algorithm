@@ -18,9 +18,6 @@ function solution(n, arr1, arr2) {
 
 function checkLength(arg, len) {
   // 2진수로 바꿔주고 길이가 len보다 모자라면 0으로 채워주기
-  let ele = arg.toString(2);
-  if (ele.length < len) {
-    ele = ele.padStart(len, 0);
-  }
+  let ele = arg.toString(2).padStart(len, 0);
   return ele;
 }
