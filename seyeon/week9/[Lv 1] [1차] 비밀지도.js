@@ -26,3 +26,8 @@ function convertToBinary(arr, n) {
   }
   return arr;
 }
+
+// padStart 메서드 사용
+function convertToBinary(arr, n) {
+  return arr.map((num) => num.toString(2).padStart(n, '0'));
+}
