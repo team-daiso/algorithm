@@ -9,13 +9,13 @@ function solution(cacheSize, cities) {
     const idx = cache.indexOf(city);
 
     if (idx !== -1) {
-      time += 1;
       cache.splice(idx, 1);
+      time += 1;
     } else {
+      if (cache.length === cacheSize) cache.shift();
       time += 5;
     }
 
-    if (cache.length === cacheSize) cache.shift();
     cache.push(city);
   }
 
