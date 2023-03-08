@@ -8,15 +8,14 @@ function solution(cacheSize, cities) {
     const city = cities.shift().toLowerCase();
     if (cache.includes(city)) {
       cache.splice(cache.indexOf(city), 1);
-      cache.push(city);
       time += 1;
     } else {
       if (cache.length === cacheSize) {
         cache.shift();
       }
-      cache.push(city);
       time += 5;
     }
+    cache.push(city);
   }
   return time;
 }
