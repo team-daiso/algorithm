@@ -4,9 +4,9 @@ function solution(n) {
   const upToN = [...Array(n + 1)].fill(true, 2).fill(false, 0, 2);
 
   for (let i = 2; i <= Math.sqrt(n); i++) {
-    for (let multiple = i * i; multiple <= n; multiple += i) {
-      if (upToN[multiple] === false) continue;
+    if (!upToN[i]) continue;
 
+    for (let multiple = i * i; multiple <= n; multiple += i) {
       upToN[multiple] = false;
     }
   }
