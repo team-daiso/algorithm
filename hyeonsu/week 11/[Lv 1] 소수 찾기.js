@@ -3,7 +3,7 @@ function solution(n) {
   const arr = Array.from({ length: n + 1 }).fill(true);
   arr[0] = arr[1] = false;
   // 0하고 1. 어차피 소수 아니니까.
-  const sqrt = parseInt(Math.sqrt(n));
+  const sqrt = Math.sqrt(n);
   // 제곱근에 Math.floor를 한 것과 같음.
 
   for (let i = 2; i <= sqrt; i++) {
@@ -17,5 +17,5 @@ function solution(n) {
     }
   }
 
-  return arr.filter((v) => v === true).length;
+  return arr.filter(v => v === true).length;
 }
