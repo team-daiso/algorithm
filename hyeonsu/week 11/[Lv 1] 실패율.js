@@ -27,10 +27,10 @@ function solution(N, stages) {
   // 5 이 몇개인지? / 5 이상인 수의 개수
   const answer = [];
   const failures = [];
-  let numerator = 0;
-  let denominator = 0;
 
   for (let i = 1; i <= N; i++) {
+    let numerator = 0;
+    let denominator = 0;
     for (j = 0; j < stages.length; j++) {
       if (i <= stages[j]) {
         denominator++;
@@ -43,13 +43,11 @@ function solution(N, stages) {
       denominator = stages.length;
     }
     failures.push(numerator / denominator);
-    denominator = 0;
-    numerator = 0;
   }
   const originalFailure = [...failures];
   failures
     .sort((a, b) => b - a)
-    .map((failure) => {
+    .map(failure => {
       answer.push(originalFailure.indexOf(failure) + 1);
       originalFailure.splice(originalFailure.indexOf(failure), 1, undefined);
     });
