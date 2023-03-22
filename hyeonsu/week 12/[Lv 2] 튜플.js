@@ -22,12 +22,8 @@ function solution(s) {
     if (reg.test(el)) {
       numString += el;
     }
-    if (el === ",") {
+    if (el === "," || el === "}") {
       if (numString !== "") answerArr[answerArr.length - 1].push(+numString);
-      numString = "";
-    }
-    if (el === "}") {
-      answerArr[answerArr.length - 1].push(+numString);
       numString = "";
     }
   });
