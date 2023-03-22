@@ -28,22 +28,22 @@ function solution(dartResult) {
     el.shift();
     switch (el[0]) {
       case "S":
-        score = score ** 1;
+        score **= 1;
         break;
       case "D":
-        score = score ** 2;
+        score **= 2;
         break;
       case "T":
-        score = score ** 3;
+        score **= 3;
     }
     el.shift();
     switch (el[0]) {
       case "*":
-        score = score * 2;
-        scores[scores.length - 1] = scores[scores.length - 1] * 2;
+        score *= 2;
+        scores[scores.length - 1] *= 2;
         break;
       case "#":
-        score = score * -1;
+        score *= -1;
         break;
     }
     scores.push(score);
