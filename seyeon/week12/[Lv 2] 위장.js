@@ -1,11 +1,8 @@
 function solution(clothes) {
-  const group = {};
+  const group = clothes.reduce((obj, [_, item]) => {
+    obj[item] = ++obj[item] || 1;
+    return obj;
+  }, {});
 
-  clothes.map(([_, item]) => {
-    group[item] ? group[item]++ : (group[item] = 1);
-  });
-
-  const groupNum = Object.values(group);
-
-  return groupNum.reduce((acc, cur) => acc + cur + acc * cur);
+  return Object.values(group).reduce((acc, cur) => acc + cur + acc * cur);
 }
