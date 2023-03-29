@@ -14,12 +14,7 @@ function solution(number, limit, power) {
 
   for (let i = 1; i <= number; i++) {
     let divisorsCount = countDivisors(i);
-
-    if (divisorsCount > limit) {
-      totalWeight += power;
-    } else {
-      totalWeight += divisorsCount;
-    }
+    totalWeight += divisorsCount > limit ? power : divisorsCount;
   }
 
   return totalWeight;
