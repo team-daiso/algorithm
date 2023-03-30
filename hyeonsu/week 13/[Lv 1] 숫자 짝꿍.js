@@ -2,6 +2,7 @@ function solution(X, Y) {
   // X 하고 Y에서 공통으로 나타나는 정수 k 들을 이용해 가장 큰 숫자 만들기
   // "15236355" 과 "71309348"
   // 제가푼거 아님다..
+
   const ks = {};
   let answer = "";
   [...X].forEach(el => {
