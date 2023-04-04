@@ -4,8 +4,7 @@ function solution(number, limit, power) {
   // limit 공격력 제한수치
   // power 제한 수치를 초과한 애가 사용할 무기의 공격력
   // answer 무기점의 주인이 무기를 모두 만들기 위해 필요한 철의 무게
-
-  // 각 기사들이 가진 무기의 공격력
+  // 각 기사들이 가진 무기의 공격력 damages
   const damages = [];
   const knights = Array.from({ length: number }, (_, idx) => idx + 1);
   knights.forEach(knight => {

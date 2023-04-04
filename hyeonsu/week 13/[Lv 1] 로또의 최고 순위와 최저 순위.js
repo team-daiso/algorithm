@@ -5,7 +5,7 @@ function solution(lottos, win_nums) {
   // 2개 - 5등  3개 - 4등... 7 - (당첨 개수)
   // 될 수 있는 최대 등수는 7 - (당첨 개수 + 0 개수)
   // 될 수 있는 최소 등수 7 - (당첨 개수)
-  // 내림차순 정렬. 둘다
+
   const answer = [1, 1];
   // 당첨 개수
   let win = 0;
@@ -18,6 +18,6 @@ function solution(lottos, win_nums) {
     return [6, 6];
   }
   answer[1] = win <= 1 ? 6 : 7 - win;
-  answer[0] = zeroCount >= 6 ? 1 : 7 - win - zeroCount;
+  answer[0] = 7 - win - zeroCount;
   return answer;
 }

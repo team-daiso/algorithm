@@ -1,32 +1,23 @@
-function solution(clothes) {
-  // 스파이는 매일 다른 옷을 조합해서 입어야 함
-  // clothes는 2차원 배열임
-  // 각 행은 의상의 이름, 의상의 종류
-  // 1 <= clothes.length <=30
-  // 스파이는 최소 하나씩은 입는다~
-  // 서로 다른 옷의 조합의 수
-
-  // 우선 입을 수 있는 경우의 수 자체는 (종류의 수)!임
-  // 3개 종류 옷이면
-  // 3개씩 2개씩 1개씩
-  // 같은 종류의 옷을 입지는 않음..
-  let answer = 1;
-  if (clothes.length === 1) return 1;
-  // 옷의 종류 가짓수를 세어줄 객체
-  const categories = {};
-  // 옷의 종류 가짓수를 세어줌
-  clothes.map(dress => {
-    if (!(dress[1] in categories)) {
-      categories[dress[1]] = 1;
-    } else {
-      categories[dress[1]]++;
-    }
-  });
-  const values = Object.values(categories);
-  // hash_table = {종류1: n, 종류2: m, 종류3: k, 종류4: p} 이렇게 주어졌다면
-  // (nC1 + 1) x (mC1 + 1) x (kC1 + 1) x (pC1 + 1) - 1
-  values.map(value => {
-    answer = answer * (value + 1);
-  });
-  return answer - 1;
+// 메모리 초과났어여
+function solution(n, left, right) {
+  // n행 n열 크기의 비어있는 2차원 배열을 만든다.
+  // i = 1~n까지 다음을 반복한다.
+  // i행 i열에는 숫자 i를 채우고, 그 영역은 모두 숫자 i로 채운다.
+  // 영역 =  i행 i열까지
+  // 1차원 배열을 만든다. 행을 전부 잘라서 오려붙임
+  // 이렇게 만든 1차원 배열의 [left]~[right]까지의 요소들만 새로운 배열로.
+  let answer = [];
+  // 2차원 배열 만들어줌. 속은 비었음
+  for (let i = 1; i <= n; i++) {
+    answer.push(Array.from({ length: n }));
+  }
+  const newArr = answer
+    .map((arr, idx) => {
+      return arr.map((el, id) => {
+        return Math.max(idx, id) + 1;
+      });
+    })
+    .flat()
+    .slice(left, right + 1);
+  return newArr;
 }
