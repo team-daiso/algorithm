@@ -18,6 +18,6 @@ function solution(lottos, win_nums) {
     return [6, 6];
   }
   answer[1] = win <= 1 ? 6 : 7 - win;
-  answer[0] = zeroCount >= 6 ? 1 : 7 - win - zeroCount;
+  answer[0] = 7 - win - zeroCount;
   return answer;
 }
