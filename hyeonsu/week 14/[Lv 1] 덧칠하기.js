@@ -4,8 +4,8 @@ function solution(n, m, section) {
   let painted = 0;
   for (let el of section) {
     // 스스로도 포함하기 때문에 1을 빼줘야 함...2번에서부터 4개 색칠하면 5까지임.
-    if (painted < el) {
-      painted = m + el - 1;
+    if (painted <= el) {
+      painted = m + el;
       answer++;
     }
   }
