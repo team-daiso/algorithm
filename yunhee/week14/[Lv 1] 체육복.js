@@ -1,7 +1,7 @@
 function solution(n, lost, reserve) {
     // 바로 앞번호나 뒷번호의 학생에게만 체육복을 빌려줄 수 있다.
     // 체육수업을 들을 수 있는 학생의 최댓값을 반환
-    const losts = [];
+    let losts = 0;
     
     lost.sort((a, b) => a - b);
     reserve.sort((a, b) => a - b);
@@ -24,8 +24,8 @@ function solution(n, lost, reserve) {
         
         if(prev > -1) reserve.splice(prev, 1);
         else if(next > -1) reserve.splice(next, 1);
-        else losts.push(number);
+        else losts++;
     }
     
-    return n - losts.length;
+    return n - losts;
 }
