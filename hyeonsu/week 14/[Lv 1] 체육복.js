@@ -33,25 +33,3 @@ function solution(n, lost, reserve) {
   });
   return n;
 }
-
-function solution(n, lost, reserve) {
-  // 학생들은 체격 순으로 번호 매겨짐
-  // 바로 앞이나 뒷번호의 학생에게 빌려줌
-  // n = 전체 학생 수
-  // lost = 잃어버린 학생 배요ㅕㄹ
-  // reserve = 예약있는 학생 배열
-  if (n === 2) return 2;
-  lost.sort((a, b) => a - b);
-  reserve.sort((a, b) => a - b);
-  let answer = n - lost.length;
-  let start = 0;
-  reserve.map(el => {
-    if (lost.includes(el)) return;
-    const num = lost[start];
-    if (el + 1 === num || el - 1 === num) {
-      answer++;
-      start++;
-    }
-  });
-  return answer;
-}
