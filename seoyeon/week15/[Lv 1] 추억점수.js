@@ -1,5 +1,5 @@
 function solution(name, yearning, photo) {
-    let score = {};
+    let score = {}
     
     name.forEach((el,idx) => score[el] = yearning[idx]);
     
