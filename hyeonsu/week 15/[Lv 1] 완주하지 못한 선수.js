@@ -32,21 +32,15 @@ function solution(participant, completion) {
   // 근데 동명이인이 있을 수도..
   let answer = "";
   const participantHash = {};
-  const completionHash = {};
   for (let el of participant) {
-    participantHash[el] === undefined
-      ? (participantHash[el] = 1)
-      : participantHash[el]++;
+    if (!participantHash[el]) participantHash[el] = 0;
+    participantHash[el]++;
   }
   for (let el of completion) {
-    completionHash[el] === undefined
-      ? (completionHash[el] = 1)
-      : completionHash[el]++;
+    participantHash[el]--;
   }
   for (let el in participantHash) {
-    if (participantHash[el] !== completionHash[el]) {
-      answer = el;
-    }
+    if (participantHash[el] !== 0) answer = el;
   }
 
   return answer;
