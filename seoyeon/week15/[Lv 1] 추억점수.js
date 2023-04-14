@@ -5,5 +5,5 @@ function solution(name, yearning, photo) {
     
     return photo.map(el => 
               el.reduce((acc,cur) => acc + (score[cur] ? score[cur] : 0) ,0)
-					 )
+			)
 }
