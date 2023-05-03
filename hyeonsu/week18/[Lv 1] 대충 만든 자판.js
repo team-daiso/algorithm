@@ -1,4 +1,4 @@
-// 왜 안되는지 몰루겠슴미다..
+// 됐어욤 왕~~
 
 function solution(keymap, targets) {
   // keymap = 1번 키부터 차례대로 할당된 문자들이 순서대로 담긴 문자열배열
@@ -16,11 +16,16 @@ function solution(keymap, targets) {
   });
   targets.forEach(el => {
     let clicks = 0;
-    [...el].forEach(char => {
-      if (hash[char]) clicks += hash[char];
-    });
+    for (let char of [...el]) {
+      if (hash[char]) {
+        clicks += hash[char];
+      } else {
+        clicks = -1;
+        break;
+      }
+    }
     answer.push(clicks === 0 ? -1 : clicks);
   });
-  console.log(hash);
+
   return answer;
 }

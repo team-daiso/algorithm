@@ -4,17 +4,20 @@ function solution(players, callings) {
   const answer = [];
   const hash = {};
   players.forEach((el, idx) => {
-    hash[idx + 1] = el;
+    hash[el] = idx + 1;
   });
   callings.forEach((el, idx) => {
-    const i = Object.values(hash).indexOf(el) + 1;
-    const front = hash[i - 1];
-    const back = hash[i];
-    hash[i - 1] = back;
-    hash[i] = front;
+    // 불린 플레이어가 누군지?
+    // 그보다 앞선 플레이어는 또 누구였는지?
+    const backPlayerIdx = hash[el];
+    const frontPlayer = players[backPlayerIdx - 2];
+    players[backPlayerIdx - 1] = frontPlayer;
+    players[backPlayerIdx - 2] = el;
+    hash[el]--;
+    hash[frontPlayer]++;
   });
   for (let i = 0; i <= players.length - 1; i++) {
     answer[i] = hash[i + 1];
   }
-  return answer;
+  return players;
 }
